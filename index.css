@@ -1,0 +1,439 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:sans-serif;
+}
+body{
+    
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url('nasa-vltMzn0jqsA-unsplash.jpg') ;
+    background-size: cover;
+    background-position: center;
+}
+
+.flexbody{
+    display: flex;
+}
+header{
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 65px;
+    padding: 10px 100px;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+
+    background: transparent;
+    border-bottom: 2px solid rgba(255,255,255,.5);
+    backdrop-filter: blur(10px);
+    box-shadow:0 0 30px rgba(0,0,0,.5) ;
+
+}
+
+.navigation a{
+    position: relative;
+    font-size: 18px;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left:40px ;
+}
+
+
+
+.navigation .btnlogin{
+    width: 130px;
+    height:50px;
+    background: transparent;
+    border: 2px solid white;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 20px;
+    color:white;
+    font-weight: 500;
+    margin-left: 40px;
+    transition: .5s;
+}
+
+.navigation .btnlogin:hover{
+    background-color: white;
+    color: black;
+}
+
+.wrapper{
+    position: relative;
+    width:400px;
+    height: 440px;
+    background: transparent;
+    border: 2px solid rgba(255,255,255,.5);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    box-shadow:0 0 30px rgba(0,0,0,.5) ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transition: height .2s ease;
+}
+
+.wrapper.active{
+    height:480px;
+}
+
+.wrapper .form-box{
+    width: 100%;
+    padding:40px;
+}
+
+.wrapper .form-box.login{
+       transition: transform .18s ease;
+       transform: translateX(0);
+}
+
+.wrapper.active .form-box.login{
+    transition: none;
+    transform: translateX(-400px);
+}
+
+.wrapper .form-box.register{
+    position: absolute;
+    transition: none;
+    transform: translateX(400px);
+}
+
+.wrapper.active .form-box.register{
+    transition: transform .18s ease;
+    transform: translateX(0);
+}
+
+.wrapper .icon-close{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 45px;
+    height: 45px;
+    background:black;
+    font-size: 27px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom-left-radius: 20px;
+    cursor: pointer;
+    z-index:1;
+
+}
+
+.form-box h2{
+    font-size: 40px;
+    text-align: center;
+}
+
+.input-box{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    border-bottom: 2px solid black;
+    margin: 30px 0;
+}
+
+
+.input-box label{
+    position:absolute;
+    top:50%;
+    left:5px;
+    transform: translateY(-50%);
+    font-size: 17px;
+    color: black;
+    font-weight: 500;
+    pointer-events: none;
+    transition: .5s;
+}
+
+
+.input-box input:focus~label,
+.input-box input:valid~label{
+    top:-5px;
+}
+
+.input-box input{
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 15px;
+    color: black;
+    font-weight: 600;
+    padding:0 35px o 5px;
+}
+
+.remember-forgot{
+    font-size: 14px;
+    color: black;
+    font-weight: 500;
+    margin: -15px 0 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.remember-forgot label input{
+    accent-color: black;
+    margin-right: 3px;
+}
+
+.remember-forgot a{
+    color: black;
+    text-decoration: none;
+}
+
+.remember-forgot a:hover{
+    text-decoration: underline;
+}
+
+.btn{
+    width: 100%;
+    height:45px;
+    background: black;
+    border: none;
+    outline:none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 17px;
+    color: white;
+
+}
+
+
+.login-register{
+    font-size: 14px;
+    color: black;
+    text-align: center;
+    font-weight: 500;
+    margin: 25px 0 10px;
+}
+
+.login-register p a{
+    color:black;
+    text-decoration: none;
+    font-weight: 600;
+
+}
+
+.login-register p a:hover{
+    text-decoration: underline;
+}
+
+
+
+.box2{
+    width:400px;
+    background: transparent;
+    background-color: white;
+    opacity: 0.75;
+    margin-left: 40px;
+    margin-top: 20px;
+    height:280px ;
+    padding: 20px 20px;
+    border-radius: 20px;
+    text-align: left;
+    overflow-y: scroll;
+}
+#imglogo{
+    text-align: center;
+    margin-right: 20px;
+    margin-top: 20px;
+}
+#intro-box{
+    width: 750px;
+    height: 400px;
+    text-align: center;
+    padding: 50px;
+    background: transparent;
+    border: 2px solid rgba(255,255,255,.5);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    box-shadow:0 0 30px rgba(0,0,0,.5) ;
+    display: flex;
+}
+
+.intro-index a{
+    margin: 15px;
+    text-decoration: none;
+    color: white;
+    padding:10px;
+    border-radius: 10px;
+    transition: 0.5s;
+    font-size: 19px;
+}
+
+.intro-index a:hover{
+    background-color: white;
+    color: black;
+}
+
+.course-intro{
+    position: absolute;
+    top: 17%;
+    left: 30%;
+    background: transparent;
+    border: 2px solid rgba(255,255,255,.5);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    box-shadow:0 0 30px rgba(0,0,0,.5) ;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 70px;
+    width: 500px;
+    padding-top: 15px;
+}
+
+.imgmap{
+    position: absolute;
+    top: 30%;
+    left:22%;
+    padding: 20px;
+    background: transparent;
+    border: 2px solid rgba(255,255,255,.5);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    box-shadow:0 0 30px rgba(0,0,0,.5) ;
+}
+
+.planet{
+    position: absolute;
+    left:25%;
+    padding: 20px 90px;
+    background: transparent;
+    border: 2px solid rgba(255,255,255,.5);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    box-shadow:0 0 30px rgba(0,0,0,.5) ;
+}
+
+
+
+#mercury{
+    position: absolute;
+    top:130%;
+}
+
+#venus{
+    position: absolute;
+    top: 200%;
+}
+
+#earth{
+    position: absolute;
+    top: 270%;
+}
+
+#mars{
+    position: absolute;
+    top: 340%;
+}
+
+#jupiter{
+    position: absolute;
+    top: 410%;
+}
+
+#saturn{
+    position: absolute;
+    top: 480%;
+}
+
+#uranus{
+    position: absolute;
+    top: 550%;
+}
+
+#neptune{
+    position: absolute;
+    top: 620%;
+}
+
+#sun{
+    position: absolute;
+    top: 690%;
+}
+
+.assessment-body{
+    position:absolute;
+    top: 35%;
+    left: 15%;
+    width:900px;
+    height: 1500px;
+    background: transparent;
+    border: 2px solid rgba(255,255,255,.5);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    box-shadow:0 0 30px rgba(0,0,0,.5) ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.question-box{
+    margin:40px;
+    background-color: #FFFEF2;
+    list-style-position: inside ;
+    padding: 20px;
+    width: 600px;
+    border-radius: 20px;
+    border: solid white ;
+}
+
+.question-box li{
+    margin:10px;
+}
+
+.question-box input[type="radio"]{
+    accent-color: black;
+}
+
+.view-results{
+    position: absolute;
+    left:45%;
+    background-color: black;
+    color: white;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 15px;
+    transition: .5s;
+}
+
+.view-results:hover{
+    background-color: white;
+    color: black;
+}
+
+#myresults{
+    padding: 15px;
+    position: absolute;
+    left: 40%;
+    border-radius: 15px;
+    font-weight: bold;
+}
+
+footer{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    width: 100%;
+    padding: 10px;
+    background-color: black;
+    opacity: 0.75;
+    color: white;
+
+}
